@@ -20,16 +20,12 @@ jobs:
       - name: Merge PR
         if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
         run: |
-          run curl -X PUT "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.context.payload.pull_request.number }}/merge" \
-            -H "Authorization: Bearer ${{ github.token }}" \
-            -d '{ "merge_method": "merge" }'
+          gh pr merge ${github.context.payload.pull_request.number} --squash --merge-method merge
 
       - name: Add labels
         if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
         run: |
-          run curl -X POST "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.context.payload.pull_request.number }}/labels" \
-            -H "Authorization: Bearer ${{ github.token }}" \
-            -d '[ { "name": "merged" }, { "name": "approved" } ]'
+          gh pr label ${github.context.payload.pull_request.number} merged approved
 
       - name: Check merge result
         if: ${{ steps.merge_result.outputs.merge_result != 'success' }}
