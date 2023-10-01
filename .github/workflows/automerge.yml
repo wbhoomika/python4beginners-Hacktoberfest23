@@ -14,8 +14,4 @@ jobs:
 
       - name: Add label
         run: |
-          run gh pr label ${github.context.payload.pull_request.number} merged
-
-      - name: Merge PR
-        run: |
-          run gh pr merge ${github.context.payload.pull_request.number} --squash
+          gh pr label ${github.context.payload.pull_request.number} correct-pr best
