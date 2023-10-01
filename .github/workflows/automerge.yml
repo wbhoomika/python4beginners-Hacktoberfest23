@@ -19,20 +19,20 @@ jobs:
 
       - name: Merge PR
         if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
-        run: |
-          gh pr merge ${github.context.payload.pull_request.number} --squash --merge-method merge
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.pulls.merge({
+              pull_number: github.context.payload.pull_request.number,
+              merge_method: 'squash'
+            })
 
       - name: Add labels
         if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
-        run: |
-          gh pr label ${github.context.payload.pull_request.number} merged approved
-
-      - name: Check merge result
-        if: ${{ steps.merge_result.outputs.merge_result != 'success' }}
-        run: |
-          exit 1
-
-      - name: Check add labels result
-        if: ${{ steps.add_labels_result.outputs.add_labels_result != 'success' }}
-        run: |
-          exit 1
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.issues.addLabels({
+              issue_number: github.context.payload.pull_request.number,
+              labels: ['merged', 'approved']
+            })
