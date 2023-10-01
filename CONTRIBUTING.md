@@ -12,3 +12,8 @@
 #### Name: Bhoomika Wavhal
 - GitHub: https://github.com/wbhoomika/
 ```
+
+```markdown
+#### Name: Siddharth Shete
+- GitHub: https://github.com/rototrash/
+```
