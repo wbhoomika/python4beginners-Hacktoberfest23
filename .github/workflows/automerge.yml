@@ -14,27 +14,29 @@ jobs:
           
       - name: Get approval status
         id: get_approval_status
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.actions.setOutput('approval_status', github.context.payload.pull_request.review.state)
+        run: |
+          echo "::set-output name=approval_status::${{ github.context.payload.pull_request.review.state }}"
 
       - name: Merge PR
         if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.pulls.merge({
-              pull_number: github.context.payload.pull_request.number,
-              merge_method: 'squash'
-            })
+        run: |
+          run curl -X PUT "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.context.payload.pull_request.number }}/merge" \
+            -H "Authorization: Bearer ${{ github.token }}" \
+            -d '{ "merge_method": "merge" }'
 
       - name: Add labels
         if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.issues.addLabels({
-              issue_number: github.context.payload.pull_request.number,
-              labels: ['merged', 'approved']
-            })
+        run: |
+          run curl -X POST "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.context.payload.pull_request.number }}/labels" \
+            -H "Authorization: Bearer ${{ github.token }}" \
+            -d '[ { "name": "merged" }, { "name": "approved" } ]'
+
+      - name: Check merge result
+        if: ${{ steps.merge_result.outputs.merge_result != 'success' }}
+        run: |
+          exit 1
+
+      - name: Check add labels result
+        if: ${{ steps.add_labels_result.outputs.add_labels_result != 'success' }}
+        run: |
+          exit 1
