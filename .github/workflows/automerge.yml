@@ -5,36 +5,14 @@ on:
     types: [submitted]
 
 jobs:
-  automerge:
+  approved:
+    if: github.event.review.state == 'APPROVED'
     runs-on: ubuntu-latest
     steps:
-      - name: Install gh
-        run: |
-          npm install -g gh
-          
-      - name: Get approval status
-        id: get_approval_status
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.actions.setOutput('approval_status', github.context.payload.pull_request.review.state)
-
-      - name: Merge PR
-        if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.pulls.merge({
-              pull_number: github.context.payload.pull_request.number,
-              merge_method: 'squash'
-            })
+      - name: Check Approval
+        run: echo "This PR was approved"
 
       - name: Add labels
-        if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.issues.addLabels({
-              issue_number: github.context.payload.pull_request.number,
-              labels: ['merged', 'approved']
-            })
+        run: |
+          gh pr label ${{ github.context.payload.pull_request.number }} correct-pr best
+      
