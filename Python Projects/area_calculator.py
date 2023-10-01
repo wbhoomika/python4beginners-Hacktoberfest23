@@ -9,14 +9,19 @@ def calculate_circle_area(radius):
 def calculate_triangle_area(base, height):
     return 0.5 * base * height
 
+def calculate_square_area(length):
+    return length * length
+
+
 while True:
     print("Select a shape to calculate its area:")
     print("1. Rectangle")
     print("2. Circle")
     print("3. Triangle")
-    print("4. Quit")
+    print("4. Square")
+    print("5. Quit")
 
-    choice = input("Enter your choice (1/2/3/4): ")
+    choice = input("Enter your choice (1/2/3/4/5): ")
 
     if choice == '1':
         length = float(input("Enter the length of the rectangle: "))
@@ -33,6 +38,10 @@ while True:
         area = calculate_triangle_area(base, height)
         print(f"The area of the triangle is: {area}")
     elif choice == '4':
+        side = float(input("Enter the length of the square: "))
+        area = calculate_square_area(length)
+        print(f"The area of the square is: {area}")
+    elif choice == '5':
         print("Goodbye!")
         break
     else:
