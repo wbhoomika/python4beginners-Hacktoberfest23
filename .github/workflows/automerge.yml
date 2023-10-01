@@ -11,11 +11,6 @@ jobs:
       - name: Install gh
         run: |
           npm install -g gh
-          
-      - name: Get approval status
-        id: get_approval_status
-        run: |
-          echo "::set-env name=APPROVAL_STATUS::${{ github.context.payload.pull_request.review.state }}"
 
       - name: Add labels
         uses: actions/github-script@v5
@@ -27,6 +22,5 @@ jobs:
             })
 
       - name: Merge PR
-        if: ${{ env.APPROVAL_STATUS == 'APPROVED' }}
         run: |
           run gh pr merge ${github.context.payload.pull_request.number} --squash
