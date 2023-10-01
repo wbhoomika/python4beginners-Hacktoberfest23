@@ -13,24 +13,24 @@ jobs:
         uses: actions/github-script@v5
         with:
           script: |
-            github.actions.setOutput('approval_status', github.context.payload.pull_request.review.state)
+            echo "::set-output name=approval_status::${{ github.context.payload.pull_request.review.state }}"
 
       - name: Merge PR
         if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.pulls.merge({
-              pull_number: github.context.payload.pull_request.number,
-              merge_method: 'squash'
-            })
+        run: |
+          echo "::set-output name=merge_result::$(gh pr merge ${github.context.payload.pull_request.number} --squash)"
 
       - name: Add labels
         if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.issues.addLabels({
-              issue_number: github.context.payload.pull_request.number,
-              labels: ['good first issue', 'approved', 'hacktober-accepted']
-            })
+        run: |
+          echo "::set-output name=add_labels_result::$(gh pr label ${github.context.payload.pull_request.number} merged approved)"
+
+      - name: Check merge result
+        if: ${{ steps.merge_result.outputs.merge_result != 'success' }}
+        run: |
+          exit 1
+
+      - name: Check add labels result
+        if: ${{ steps.add_labels_result.outputs.add_labels_result != 'success' }}
+        run: |
+          exit 1
