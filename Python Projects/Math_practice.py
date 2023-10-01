@@ -18,9 +18,8 @@ def main():
     while j < number_of_problems:
         i = 0
         X, Y = generate_integer(level)
-        ans = X + Y
-        while i < 3:
-            problem, ans = get_problem(X, Y)
+        problem, ans = get_problem(X, Y)
+        while i < 3:  
             print(problem, end="")
             sol = input()
             if str(sol) == str(ans):
