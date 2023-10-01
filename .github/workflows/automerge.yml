@@ -2,7 +2,7 @@ name: Automerge PR
 
 on:
   pull_request_review:
-    types: [submitted]
+    types: [submitted, updated]
 
 jobs:
   automerge:
