@@ -5,12 +5,17 @@ on:
     types: [submitted, updated]
 
 jobs:
-  automerge:
+  add_labels:
     runs-on: ubuntu-latest
     steps:
-      - name: Install gh
+      - name: Get approval status
+        id: get_approval_status
         run: |
-          npm install -g gh
+          echo "::set-output name=APPROVAL_STATUS::${{ github.context.payload.pull_request.review.state }}"
+
+      - name: Print pull request number
+        run: |
+          echo "${{ github.context.payload.pull_request.number }}"
 
       - name: Add label
         run: |
