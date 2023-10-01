@@ -17,10 +17,6 @@ jobs:
         run: |
           echo "::set-output name=approval_status::${{ github.context.payload.pull_request.review.state }}"
 
-      - name: Merge PR
-        if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
-        run: gh pr merge --all
-
       - name: Add labels
         if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
         uses: actions/github-script@v5
@@ -30,3 +26,8 @@ jobs:
               issue_number: github.context.payload.pull_request.number,
               labels: ['merged', 'approved']
             })
+
+      - name: Merge PR
+        if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
+        run: |
+          run gh pr merge ${github.context.payload.pull_request.number} --squash
