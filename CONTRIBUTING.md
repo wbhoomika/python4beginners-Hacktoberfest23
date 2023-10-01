@@ -14,5 +14,5 @@
 ```
 ```markdown
 #### Name: DevVortex504
-- GitHub: https://github.com/DevVortex504/
+- GitHub: [https://github.com/DevVortex504/](https://github.com/DevVortex504/)
 ```
