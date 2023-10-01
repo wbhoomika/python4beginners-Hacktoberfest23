@@ -19,13 +19,7 @@ jobs:
 
       - name: Merge PR
         if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.pulls.merge({
-              pull_number: github.context.payload.pull_request.number,
-              merge_method: 'squash'
-            })
+        run: gh pr merge --all
 
       - name: Add labels
         if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
