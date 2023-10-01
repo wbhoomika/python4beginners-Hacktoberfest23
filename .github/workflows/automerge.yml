@@ -8,15 +8,14 @@ jobs:
   add_labels:
     runs-on: ubuntu-latest
     steps:
-      - name: Get approval status
-        id: get_approval_status
+      - name: Install gh
         run: |
-          echo "::set-output name=APPROVAL_STATUS::${{ github.context.payload.pull_request.review.state }}"
+          npm install -g gh
 
       - name: Print pull request number
         run: |
-          echo "${{ github.context.payload.pull_request.number }}"
+          gh pr number
 
-      - name: Add label
-        run: |
-          gh pr label ${github.context.payload.pull_request.number} correct-pr best
+      # - name: Add label
+      #   run: |
+      #     gh pr label ${github.context.payload.pull_request.number} correct-pr best
