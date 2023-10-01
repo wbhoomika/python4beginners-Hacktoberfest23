@@ -2,12 +2,17 @@ name: Automerge PR
 
 on:
   pull_request_review:
-    types: [submitted, updated]
+    types: [submitted]
 
 jobs:
-  add_labels:
+  approved:
+    if: github.event.review.state == 'APPROVED'
     runs-on: ubuntu-latest
     steps:
+      - name: Install gh
+        run: |
+          npm install -g gh
+
       - name: Get approval status
         id: get_approval_status
         run: |
@@ -15,7 +20,7 @@ jobs:
 
       - name: Print pull request number
         run: |
-          echo "${{ github.context.payload.pull_request.number }}"
+          gh pr number
 
       - name: Add label
         run: |
