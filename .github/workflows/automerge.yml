@@ -15,19 +15,18 @@ jobs:
       - name: Get approval status
         id: get_approval_status
         run: |
-          echo "::set-output name=approval_status::${{ github.context.payload.pull_request.review.state }}"
+          echo "::set-env name=APPROVAL_STATUS::${{ github.context.payload.pull_request.review.state }}"
 
       - name: Add labels
-        if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
         uses: actions/github-script@v5
         with:
           script: |
             github.issues.addLabels({
               issue_number: github.context.payload.pull_request.number,
-              labels: ['merged', 'approved']
+              labels: ['merged', 'hacktoberfest-approved']
             })
 
       - name: Merge PR
-        if: ${{ steps.get_approval_status.outputs.approval_status == 'APPROVED' }}
+        if: ${{ env.APPROVAL_STATUS == 'APPROVED' }}
         run: |
           run gh pr merge ${github.context.payload.pull_request.number} --squash
