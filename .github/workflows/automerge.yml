@@ -12,14 +12,9 @@ jobs:
         run: |
           npm install -g gh
 
-      - name: Add labels
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.issues.addLabels({
-              issue_number: github.context.payload.pull_request.number,
-              labels: ['merged', 'hacktoberfest-approved']
-            })
+      - name: Add label
+        run: |
+          run gh pr label ${github.context.payload.pull_request.number} merged
 
       - name: Merge PR
         run: |
