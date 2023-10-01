@@ -13,7 +13,7 @@
 - GitHub: https://github.com/wbhoomika/
 
 #### Name: Shubham Aggarwal
-- GitHub: https://github.com/Shubham_1306/
+- GitHub: https://github.com/Shubham-Aggarwal-1306/
 ```
 
 ```markdown
