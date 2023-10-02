@@ -9,11 +9,16 @@ def calculate_circle_area(radius):
 def calculate_triangle_area(base, height):
     return 0.5 * base * height
 
+
 def calculate_trapezoid_area(base1,base2,vertical_height):
     return 0.5*(base1+base2)*vertical_height
 
 def calculate_ellipse_area(major_axis_radius,minor_axis_radius):
     return math.pi*major_axis_radius*minor_axis_radius
+
+def calculate_square_area(length):
+    return length * length
+
 
 while True:
     print("Select a shape to calculate its area:")
@@ -22,9 +27,10 @@ while True:
     print("3. Triangle")
     print("4. Trapezoid")
     print("5. Ellipse")
-    print("6. Quit")
+    print("6. Square")
+    print("7. Quit")
 
-    choice = input("Enter your choice (1/2/3/4): ")
+    choice = input("Enter your choice (1/2/3/4/5/6/7): ")
 
     if choice == '1':
         length = float(input("Enter the length of the rectangle: "))
@@ -50,7 +56,11 @@ while True:
         max_r = float(input("Enter the value of the radius of the major axis : "))
         print(f"The area of the ellipse is : {calculate_ellipse_area(max_r,min_r)}")
     elif choice == "6":
+        side = float(input("Enter the side of the Square: "))
+        area = calculate_square_area(side)
+        print(f"The area of the square is: {area}")
+    elif choice == '7':
         print("Goodbye!")
         break
     else:
-        print("Invalid choice. Please select a valid option.")
+        print ("Select a valid shape")
