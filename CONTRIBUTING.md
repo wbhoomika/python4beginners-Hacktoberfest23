@@ -55,3 +55,8 @@
 #### Name: Prithwish Raymahapatra
 - GitHub: https://github.com/Prithsray/
 ```
+
+```markdown
+#### Name: Hasanul Banna Himel
+- GitHub: https://github.com/Hasanul-Banna-Himel
+```
