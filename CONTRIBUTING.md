@@ -12,3 +12,8 @@
 #### Name: Bhoomika Wavhal
 - GitHub: https://github.com/wbhoomika/
 ```
+
+```markdown
+#### Name: Prithwish Raymahapatra
+- GitHub: https://github.com/Prithsray/
+```
