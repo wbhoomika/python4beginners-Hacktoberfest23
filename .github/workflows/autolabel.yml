@@ -6,6 +6,9 @@ on:
 
 jobs:
   auto-label:
+    permissions:
+        contents: read
+        pull-requests: write
     if: github.event.review.state == 'APPROVED'
     runs-on: ubuntu-latest
     steps:
@@ -16,4 +19,3 @@ jobs:
         uses: actions/labeler@v4
         with:
           configuration_path: .github/labeler.yml
-          labels: hacktoberfest-accepted, good-issue, hacktoberfest-2023
