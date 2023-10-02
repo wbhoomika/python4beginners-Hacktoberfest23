@@ -12,3 +12,8 @@
 #### Name: Bhoomika Wavhal
 - GitHub: https://github.com/wbhoomika/
 ```
+
+```markdown
+#### Name: Gayathri Sankar
+- GitHub: https://github.com/gayathri-commits/<gayathri-commits>/
+```
