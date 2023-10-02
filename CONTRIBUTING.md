@@ -25,3 +25,8 @@
 #### Name: Subha Sundar Chakraborty
 - GitHub: https://github.com/csubhasundar
 ```
+
+```markdown
+#### Name: Shubham Atkal
+- GitHub: https://github.com/shubhamatkal
+```
