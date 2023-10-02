@@ -27,6 +27,11 @@
 ```
 
 ```markdown
+#### Name: Shubham Atkal
+- GitHub: https://github.com/shubhamatkal
+```
+
+```markdown
 #### Name: <Zeeshan Fahad>
 - GitHub: https://github.com/Zeeshan-szf/
 ```
@@ -50,4 +55,3 @@
 #### Name: Prithwish Raymahapatra
 - GitHub: https://github.com/Prithsray/
 ```
-
