@@ -12,3 +12,7 @@
 #### Name: Bhoomika Wavhal
 - GitHub: https://github.com/wbhoomika/
 ```
+```markdown
+#### Name: Debaditya Banerji
+- GitHub: https://github.com/devAdityaa/
+```
