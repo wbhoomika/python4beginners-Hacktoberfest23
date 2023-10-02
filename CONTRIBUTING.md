@@ -38,3 +38,8 @@
 #### Name: Gayathri Sankar
 - GitHub: https://github.com/gayathri-commits/<gayathri-commits>/
 ```
+
+```markdown
+#### Name: Prithwish Raymahapatra
+- GitHub: https://github.com/Prithsray/
+```
