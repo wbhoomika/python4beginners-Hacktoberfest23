@@ -12,3 +12,7 @@
 #### Name: Bhoomika Wavhal
 - GitHub: https://github.com/wbhoomika/
 ```
+```markdown
+#### Name: Naman Arora
+- GitHub: https://github.com/nmnarora600/
+```
