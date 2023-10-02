@@ -1,8 +1,7 @@
 name: Auto Label PR
 
 on:
-  pull_request_review:
-    types: [submitted]
+  pull_request_target
 
 jobs:
   auto-label:
