@@ -25,10 +25,17 @@
 #### Name: Subha Sundar Chakraborty
 - GitHub: https://github.com/csubhasundar
 ```
+
+```markdown
+#### Name: <Zeeshan Fahad>
+- GitHub: https://github.com/Zeeshan-szf/
+```
+
 ```markdown
 #### Name: MrB141107
 - GitHub: https://github.com/MrB141107
 ```
+
 ```markdown
 #### Name: Naman Arora
 - GitHub: https://github.com/nmnarora600/
@@ -43,3 +50,4 @@
 #### Name: Prithwish Raymahapatra
 - GitHub: https://github.com/Prithsray/
 ```
+
