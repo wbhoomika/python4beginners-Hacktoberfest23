@@ -13,7 +13,7 @@ jobs:
         run: echo "This PR was approved"
 
       - name: Add labels
-        uses: actions/labeler@v5
+        uses: actions/labeler@v4
         with:
           configuration_path: .github/labeler.yml
           labels: hacktoberfest-accepted, good-issue, hacktoberfest-2023
