@@ -3,6 +3,9 @@ name: Automerge PR
 on:
   pull_request_review:
     types: [submitted]
+    
+env:
+  GH_TOKEN: ${{ github.token }}
 
 jobs:
   approved:
