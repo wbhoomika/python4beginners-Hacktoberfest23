@@ -11,6 +11,9 @@
 ```markdown
 #### Name: Bhoomika Wavhal
 - GitHub: https://github.com/wbhoomika/
+
+#### Name: Shubham Aggarwal
+- GitHub: https://github.com/Shubham-Aggarwal-1306/
 ```
 
 ```markdown
@@ -26,4 +29,34 @@
 ```markdown
 #### Name: Shehzan Sheikh
 - GitHub: https://github.com/shehzansk
+```
+
+```markdown
+#### Name: Shubham Atkal
+- GitHub: https://github.com/shubhamatkal
+```
+
+```markdown
+#### Name: <Zeeshan Fahad>
+- GitHub: https://github.com/Zeeshan-szf/
+```
+
+```markdown
+#### Name: MrB141107
+- GitHub: https://github.com/MrB141107
+```
+
+```markdown
+#### Name: Naman Arora
+- GitHub: https://github.com/nmnarora600/
+```
+
+```markdown
+#### Name: Gayathri Sankar
+- GitHub: https://github.com/gayathri-commits/<gayathri-commits>/
+```
+
+```markdown
+#### Name: Prithwish Raymahapatra
+- GitHub: https://github.com/Prithsray/
 ```
