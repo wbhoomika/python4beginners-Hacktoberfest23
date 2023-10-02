@@ -33,3 +33,8 @@
 #### Name: Naman Arora
 - GitHub: https://github.com/nmnarora600/
 ```
+
+```markdown
+#### Name: Gayathri Sankar
+- GitHub: https://github.com/gayathri-commits/<gayathri-commits>/
+```
