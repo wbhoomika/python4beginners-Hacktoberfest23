@@ -1,5 +1,8 @@
-labeler:
-  labels:
-    - hacktoberfest-accepted
-    - good-issue
-    - hacktoberfest-2023
+hacktoberfest-accepted:
+- '**'
+
+good-issuec:
+- '**'
+
+hacktoberfest-2023:
+- '**'
