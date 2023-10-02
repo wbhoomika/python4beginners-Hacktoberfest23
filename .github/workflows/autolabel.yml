@@ -1,0 +1,19 @@
+name: Auto Label PR
+
+on:
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  approved:
+    if: github.event.review.state == 'APPROVED'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Approval
+        run: echo "This PR was approved"
+
+      - name: Add labels
+        uses: actions/labeler@v5
+        with:
+          configuration_path: .github/labeler.yml
+          labels: hacktoberfest-accepted, good-issue, hacktoberfest-2023

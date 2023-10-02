@@ -1,0 +1,5 @@
+labeler:
+  labels:
+    - hacktoberfest-accepted
+    - good-issue
+    - hacktoberfest-2023
