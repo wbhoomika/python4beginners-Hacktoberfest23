@@ -6,16 +6,13 @@ on:
 
 jobs:
   auto-label:
-    permissions:
-        contents: read
-        pull-requests: write
     if: github.event.review.state == 'APPROVED'
     runs-on: ubuntu-latest
     steps:
-      - name: Check Approval
-        run: echo "This PR was approved"
-
-      - name: Add labels
-        uses: actions/labeler@v4
+      - uses: actions/github-script@v5
         with:
-          configuration_path: .github/labeler.yml
+          script: |
+            github.issues.addLabels({
+              issue_number: context.issue.number,
+              labels: ['approved']
+            })
