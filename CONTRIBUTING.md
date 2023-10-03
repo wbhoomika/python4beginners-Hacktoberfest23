@@ -59,3 +59,9 @@
 #### Name: Debaditya Banerji
 - GitHub: https://github.com/devAdityaa/
 ```
+
+
+```markdown
+#### Name: Shourya Garg
+- GitHub: https://github.com/ShouryaGarg/
+```
