@@ -1,0 +1,1 @@
+Download the EAST text detection model's weights (frozen_east_text_detection.pb) and configuration (east_text_detection.pbtxt) files from the official repository: https://github.com/opencv/opencv/blob/master/samples/dnn/text_detection.py

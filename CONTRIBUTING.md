@@ -80,3 +80,7 @@
 #### Name: Prithwish Raymahapatra
 - GitHub: https://github.com/Prithsray/
 ```
+```markdown
+#### Name: Debaditya Banerji
+- GitHub: https://github.com/devAdityaa/
+```
