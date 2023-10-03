@@ -57,6 +57,11 @@
 ```
 
 ```markdown
+#### Name: Debaditya Banerji
+- GitHub: https://github.com/devAdityaa/
+```
+
+```markdown
 #### Name: Shubham Tiwari
 - GitHub: https://github.com/Shubham-Tiwari-06/
 ```
