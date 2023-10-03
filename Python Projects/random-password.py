@@ -17,7 +17,6 @@ def generate_password(length, use_digits=True, use_special_chars=True):
 
     if length < 1:
         return "Password length should be at least 1."
-    
     if not use_digits and not use_special_chars:
         return "Password must include digits and/or special characters for security."
 
@@ -28,6 +27,3 @@ if __name__ == "__main__":
     length = int(input("Enter the desired password length: "))
     use_digits = input("Include digits? (yes/no): ").lower() == "yes"
     use_special_chars = input("Include special characters? (yes/no): ").lower() == "yes"
-
-    password = generate_password(length, use_digits, use_special_chars)
-    print(f"Generated Password: {password}")
