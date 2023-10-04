@@ -29,6 +29,11 @@
 ```
 
 ```markdown
+#### Name: Shehzan Sheikh
+- GitHub: https://github.com/shehzansk
+```
+
+```markdown
 #### Name: Shubham Atkal
 - GitHub: https://github.com/shubhamatkal
 ```
