@@ -1,3 +1,5 @@
+Please note because of some issue this repo got excluded to be considered in Hacktoberfest-23. Kindly contribute in new repo: https://github.com/wbhoomika/portfolio-template-Hacktoberfest23
+
 # python4beginners-Hacktoberfest23
 
 <p align="center">

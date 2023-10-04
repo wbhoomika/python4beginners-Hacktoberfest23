@@ -11,7 +11,9 @@
 ```markdown
 #### Name: Bhoomika Wavhal
 - GitHub: https://github.com/wbhoomika/
+```
 
+```markdown
 #### Name: Shubham Aggarwal
 - GitHub: https://github.com/Shubham-Aggarwal-1306/
 ```
@@ -54,4 +56,8 @@
 ```markdown
 #### Name: Prithwish Raymahapatra
 - GitHub: https://github.com/Prithsray/
+```
+```markdown
+#### Name: Debaditya Banerji
+- GitHub: https://github.com/devAdityaa/
 ```
