@@ -20,24 +20,32 @@ def check_winner(board, player):
 def is_board_full(board):
     return all(cell != " " for row in board for cell in row)
 
+def get_player_move(board, player):
+    while True:
+        try:
+            row = int(input(f" {player}: Enter Row (0, 1, or 2): "))
+            col = int(input(f" {player}: Enter Column (0, 1, or 2): "))
+
+            if 0 <= row < 3 and 0 <= col < 3 and board[row][col] == " ":
+                return row, col
+            else:
+                print("Invalid move. Try again.")
+        except ValueError:
+            print("Invalid input. Please enter a valid row and column (0, 1, or 2).")
+
 def tic_tac_toe():
     board = [[" " for _ in range(3)] for _ in range(3)]
+    players = {"X": "Player 1", "O": "Player 2"}
     current_player = "X"
 
     while True:
         print_board(board)
-        row = int(input(f"Player {current_player}, enter row (0, 1, or 2): "))
-        col = int(input(f"Player {current_player}, enter column (0, 1, or 2): "))
-
-        if board[row][col] == " ":
-            board[row][col] = current_player
-        else:
-            print("That position is already occupied. Try again.")
-            continue
+        row, col = get_player_move(board, players[current_player])
+        board[row][col] = current_player
 
         if check_winner(board, current_player):
             print_board(board)
-            print(f"Player {current_player} wins!")
+            print(f"{players[current_player]} wins!")
             break
         elif is_board_full(board):
             print_board(board)
