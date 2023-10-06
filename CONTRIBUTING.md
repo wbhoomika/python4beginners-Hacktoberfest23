@@ -61,3 +61,7 @@
 #### Name: Debaditya Banerji
 - GitHub: https://github.com/devAdityaa/
 ```
+```markdown
+#### Name: maganjot singh
+- GitHub: https://github.com/magancodes/
+```
