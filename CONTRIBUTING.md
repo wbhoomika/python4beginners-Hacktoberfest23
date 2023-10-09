@@ -61,3 +61,8 @@
 #### Name: Debaditya Banerji
 - GitHub: https://github.com/devAdityaa/
 ```
+
+```markdown
+#### Name: Marcell Gibbs
+- GitHub: https://github.com/0silverback0
+```
