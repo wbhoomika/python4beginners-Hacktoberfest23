@@ -9,6 +9,11 @@
 # Shoutout to our passionate contributors
 
 ```markdown
+#### Name: Pulkit Gahlot
+- GitHub: https://github.com/PulkitGahlot
+```
+
+```markdown
 #### Name: Bhoomika Wavhal
 - GitHub: https://github.com/wbhoomika/
 ```
