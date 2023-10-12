@@ -1,23 +1,27 @@
 # Title: 403. Frog Jump
 # Difficulty: Hard
 # Problem: https://leetcode.com/problems/frog-jump/description/
+from typing import List
 
 # using stack (highest efficiency)
 class Solution:
     def canCross(self, stones: List[int]) -> bool:
-        stone_set = set(stones)
-        visited_set = set()
-        stack = [(0, 0)]
-        while stack:
-            stone, jump = stack.pop()
-            for j in [jump-1, jump, jump+1]:
-                s = stone + j
-                if j > 0 and s in stone_set and (s, j) not in visited_set:
-                    if s == stones[-1]:
-                        return True
-                    stack.append((s, j))
-            visited_set.add((stone, jump))
-        return False
+        n = len(stones)
+        dp = {}  # Use a dictionary to store valid jumps for each stone
+
+        for stone in stones:
+            dp[stone] = set()
+
+        dp[0].add(0)  # The first stone can only be reached with a jump of size 0
+
+        for i in range(n):
+            for j in dp[stones[i]]:
+                for step in range(j - 1, j + 2):  # Next jump size could be j-1, j, or j+1
+                    if step > 0 and stones[i] + step in dp:
+                        dp[stones[i] + step].add(step)
+
+        return len(dp[stones[-1]]) > 0
+
 
 # using dp (low efficiency)
 class Solution:

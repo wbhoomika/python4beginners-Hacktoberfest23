@@ -61,3 +61,8 @@
 #### Name: Debaditya Banerji
 - GitHub: https://github.com/devAdityaa/
 ```
+
+```markdown
+#### Name: Aritra Dey
+- GitHub: https://github.com/aritradey-CS/
+```
