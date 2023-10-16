@@ -1,0 +1,17 @@
+Names		  		Marks
+_____		  		_____
+
+Levi		-  		80
+Eren		-  		37
+Mikasa		-  		90
+Hange		-  		93
+Erwin		-  		42
+Armin		-  		72
+Grisha		-  		59
+Historia		-  		51
+Dina		-  		39
+Jean		-  		68
+Sasha		-  		59
+Hitch		-  		80
+Hannes		-  		58
+Marlo		-  		31
