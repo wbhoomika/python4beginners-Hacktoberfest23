@@ -61,3 +61,8 @@
 #### Name: Debaditya Banerji
 - GitHub: https://github.com/devAdityaa/
 ```
+
+```markdown
+#### Name: Shashwat Singh
+- GitHub: https://github.com/hzshashwat/
+```
