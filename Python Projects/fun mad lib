@@ -1,0 +1,18 @@
+place1 = input(print("Enter the name of a place: "))
+place2 = input(print("Enter another name of a place: "))
+name1 = input(print("Enter someone's name: "))
+name2 = input(print("Enter another person's name: "))
+object = input(print("Enter an object: "))
+verb1 = input(print("Enter a verb ending with ing: "))
+verb2 = input(print("Enter another verb ending with ing: "))
+adjective = input(print("Enter any adjective: "))
+
+print("Mr.MillionBucks, the boss of a million dollar company was found dead at " + place1 + ".")
+print(name1 + ", the secretary was seen " + verb1 + " from the " + place1 + " 30 minutes prior to the time of death.")
+print(name2 + ", the janitor claimed to be practicing " + verb2 + " at " + place2 + " also 30 minutes prior.")
+
+guess = input(print("Who might the killer be? "))
+if guess == name1:
+  print("Congratulations! You caught the killer!! The secretary, " + name1 + " murdered Mr.MillionBucks with a " + adjective + object + ". How unfortunate.")
+else:
+  print("Sorry, you did not correctly guess the killer, maybe next time!")
