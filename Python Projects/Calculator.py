@@ -1,16 +1,13 @@
-# Function to add two numbers
+# Define functions for arithmetic operations
 def add(x, y):
     return x + y
 
-# Function to subtract two numbers
 def subtract(x, y):
     return x - y
 
-# Function to multiply two numbers
 def multiply(x, y):
     return x * y
 
-# Function to divide two numbers
 def divide(x, y):
     if y == 0:
         return "Division by zero is not allowed."
@@ -34,17 +31,21 @@ def main():
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
 
+            # Perform the selected operation
             if user_input == "add":
-                print("Result:", add(num1, num2))
+                result = add(num1, num2)
             elif user_input == "subtract":
-                print("Result:", subtract(num1, num2))
+                result = subtract(num1, num2)
             elif user_input == "multiply":
-                print("Result:", multiply(num1, num2))
+                result = multiply(num1, num2)
             elif user_input == "divide":
                 result = divide(num1, num2)
-                print("Result:", result)
+
+            # Display the result
+            print("Result:", result)
         else:
             print("Invalid input. Please enter a valid operation.")
 
 if __name__ == "__main__":
     main()
+
