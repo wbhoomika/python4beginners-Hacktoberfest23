@@ -36,7 +36,7 @@ try:
     # print(f"This Directory contains {duration[0]} hours {duration[1]} mins {duration[2]} seconds videos")
     duration = time.strftime("%H:%M:%S", time.gmtime(duration))
     print("*******************")
-    print(f"{len(files)} videos of durations {duration}")
+    print(f"{len(files)} videos of durations {duration} ")
     print()
     print("*******************")
 
