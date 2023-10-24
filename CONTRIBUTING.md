@@ -61,3 +61,7 @@
 #### Name: Debaditya Banerji
 - GitHub: https://github.com/devAdityaa/
 ```
+```markdown
+#### Name: Kriti Katyal
+- GitHub: https://github.com/KritiKatyal/
+```
